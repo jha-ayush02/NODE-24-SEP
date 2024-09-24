@@ -1,0 +1,45 @@
+<%- include('./base/header.ejs') %>
+
+<div class="container">
+    <div class="alert bg-info my-3">
+        <h4 class="text-center" style="color:antiquewhite">Add New Student</h4>      
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <form action='/update/student/<%= student._id %>' method="post">
+                <div>
+                    <label class="form-label" for="name">Roll No</label>
+                    <input type="text" class="form-control" name="rollNo" value="<%= student.rollNo %>">
+                </div>
+                <div>
+                    <label class="form-label" for="name">First name</label>
+                    <input type="text" class="form-control" name="firstName" value="<%= student.firstName %>">
+                </div>
+                <div>
+                    <label class="form-label" for="name">Last name</label>
+                    <input type="text" class="form-control" name="lastName" value="<%= student.lastName %>">
+                </div>
+                <div>
+                    <label class="form-label" for="name">Father name</label>
+                    <input type="text" class="form-control" name="fatherName" value="<%= student.fatherName %>">
+                </div>
+                <div>
+                    <label class="form-label" for="name">Aadhar No.</label>
+                    <input type="text" class="form-control" name="aadharCardNo" value="<%= student.aadharCardNo %>">
+                </div>
+                <div>
+                    <label class="form-label" for="name">Mobile No.</label>
+                    <input type="text" class="form-control" name="mobileNo" value="<%= student.mobileNo %>">
+                </div>
+                <div >
+                    <input type="submit" value="Update Student" class="btn btn-warning w-100 mt-2" >
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<%- include('./base/footer.ejs') %>
